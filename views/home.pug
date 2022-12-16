@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='./css/style1.css')
+    link(rel='shortcut icon' type='image/png' href='./images/Logo.png')
+    title=title
+  body
+    .Lay_Out
+      .leftSection
+        .threedots
+          .dot1
+          .dot2
+          .dot3
+        .User_Details
+          .User_icon.FlexCenter=symbol
+          .Social_Details
+            .name_Details=user.name
+            .email_Details=user.email
+        .Myday
+          img(src='./images/sun.png', alt='')
+          | &nbsp;&nbsp;Tasks
+      .rightSection
+        video.vid(preload='auto', muted='', loop='')
+          source(src='./videos/Background3.mp4')
+        |  
+        .Todo_Info
+          .Heading HabitZ
+          .ListTodos
+           each to in todos
+            .TemplateTodo
+              .TextTodo
+                input(type='checkbox')
+                .DetailsText
+                  .ContentDetails=to.TodoText
+                  .DateTime
+                    img(src='./images/calender.png')
+                    .DataDate-Time=to.timeStamp
+        |  
+        .Add-Button
+          .plus +
+          | &nbsp;&nbsp;Add a task
+    script(type='module', src='./js/main.js')
+    script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')

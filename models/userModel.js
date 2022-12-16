@@ -42,6 +42,11 @@ const userSchema=new mongoose.Schema({
         default:true,
         select:false
     },
+    // todo:{
+    //     type:mongoose.Schema.ObjectId,
+    //     ref:'todos',
+        
+    // }
 })
 
 userSchema.pre('save',async function(next){

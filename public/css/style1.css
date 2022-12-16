@@ -1,0 +1,166 @@
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    user-select: none;
+    background-color: #add3e6;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.Lay_Out{
+    background-color: #add3e6;
+    height: 80vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1.2fr 3fr;
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+}
+.leftSection{
+    background-color: #E7E8E8;
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    padding: .8em .8em;
+    box-sizing: border-box;
+}
+.rightSection{
+    position: relative;
+    background-color: #c4c4c4;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* min-width: 30em; */
+}
+video{
+    position: absolute;
+    top: 0%;
+    /* height: 40rem; */
+    height: 100%;
+}
+.Todo_Info{
+    position: relative;
+    padding: 1em 1em;
+    box-sizing: border-box;
+    z-index: 100;
+    /* height: 20em; */
+    height: 88%;
+    overflow-y:auto;
+}
+.threedots{
+    position: relative;
+    width: 4em;
+    display: flex;
+    justify-content: space-between;
+}
+.dot1,.dot2,.dot3{
+    height: 1em;
+    width: 1em;
+    background-color: rgb(200, 200, 200);
+    border-radius: .5em;
+}
+.User_Details{
+    display: flex;
+    margin-top: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Social_Details{
+    display: flex;
+    flex-flow: column;
+    margin-left: 5%;
+}
+.User_icon{
+    height: 2em;
+    border-radius: 50%;
+    padding: 0.5em 0.5em;
+    width: 2em;
+    font-weight: 500;
+    background-color: #CD99BE;
+    color: #622D51;
+}
+.FlexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name_Details{
+    font-size: 18px;
+    font-weight: 600;
+    color: #3D4045;
+}
+.email_Details{
+    font-size: 13px;
+}
+.Myday{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+.Content{
+    display: flex;
+}
+.Heading{
+    display: flex;
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: 600;
+}
+.ListTodos{
+    display: flex;
+    flex-flow: column;
+    gap: .2em;
+    margin-top: 5%;
+}
+.TemplateTodo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4em .4em;
+    border-radius: .5em;
+    background-color: white;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+input[type="checkbox"]{
+    height: 1.5em;
+    width: 2em;
+}
+.TextTodo{
+    display: flex;
+    align-items: center;
+}
+.DateTime{
+    display: flex;
+    color: #899CEF;
+    font-weight: 500;
+    font-size: 14px;
+}
+.Add-Button{
+    position: relative;
+    z-index: 100;
+    color: white;
+    width: 95%;
+    padding: .7em .7em;
+    border-radius: .5em;
+    margin: 0% auto;
+    background-color: #343639c5;
+    /* background-color: #343639e7; */
+}
+.plus{
+    font-size: 24px;
+}
+.Add-Button{
+    display: flex;
+    align-items: center;
+}

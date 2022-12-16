@@ -9,6 +9,7 @@ const DBAuth=process.env.DB.replace('<password>',process.env.DBpassword);
 mongoose.connect(DBAuth,{
     useCreateIndex:true,
     useNewUrlParser: true, 
+    useFindAndModify:false,
     useUnifiedTopology: true 
 }).then((con)=>{
     console.log("DB connection successful");

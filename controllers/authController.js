@@ -28,6 +28,7 @@ const filterObj=(obj,...allowFields)=>{
 
 exports.signup=catchAsync(async(req,res,next)=>{
 
+
     const user=await User.create({
         name:req.body.name,
         email:req.body.email,
@@ -56,6 +57,7 @@ exports.signup=catchAsync(async(req,res,next)=>{
 
 exports.login=catchAsync(async(req,res,next)=>{
     
+
     const{email,password}=req.body;
 
     if(!email|| !password)
@@ -92,6 +94,10 @@ exports.protect=catchAsync(async(req,res,next)=>{
     if(req.headers.authorization && req.headers.authorization.startsWith('Bearer'))
     {
          token=req.headers.authorization.split(' ')[1];
+    }
+    else if(req.cookies.jwt)
+    {
+        token=req.cookies.jwt;
     }
 
     if(!token)

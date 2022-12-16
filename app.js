@@ -7,6 +7,8 @@ const viewRouter=require('./routes/viewroutes');
 const AppError = require('./utils/AppError');
 const morgan=require('morgan');
 const pug=require('pug');
+const cookieParser=require('cookie-parser');
+const todoRouter=require('./routes/todoRouter');
 
 app.use(express.json()); ///This makes one to write in body that is for post request
 
@@ -18,14 +20,17 @@ app.set('view engine','pug');
 app.set('views',path.join(__dirname,'views'));
 
 
+app.use(cookieParser()); ///This is used for storing cookies and stuff
+
 app.use((req,res,next)=>{
     console.log("hello from the middleware");
     next();
 })
 /// This is the middleware with next funtion
 
-app.use('/api/v1/users',userRouter);
 app.use('/',viewRouter);
+app.use('/api/v1/users',userRouter);
+app.use('/api/v1/todos',todoRouter)
 
 app.all('*',(req,res,next)=>{
     

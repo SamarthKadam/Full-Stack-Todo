@@ -1,3 +1,9 @@
+mixin contentbar(Text,image)
+  .Myday
+            img(src=`./images/${image}.png`, alt='')
+            | &nbsp;&nbsp;
+            .TaskText=Text
+
 doctype html
 html(lang='en')
   head
@@ -19,9 +25,8 @@ html(lang='en')
           .Social_Details
             .name_Details=user.name
             .email_Details=user.email
-        .Myday
-          img(src='./images/sun.png', alt='')
-          | &nbsp;&nbsp;Tasks
+        +contentbar('Tasks','sun')
+        +contentbar('Completed','check')
       .rightSection
         video.vid(preload='auto', muted='', loop='')
           source(src='./videos/Background3.mp4')

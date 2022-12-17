@@ -43,7 +43,6 @@ exports.UpdateTodos=catchAsync(async(req,res,next)=>{
     const upd={
         todo:req.body.todo
     }
-    console.log(upd);
     const data=await Todo.findOneAndUpdate({user:{_id:req.user._id}},upd,{
         new:true,
         runValidators:true
@@ -52,5 +51,13 @@ exports.UpdateTodos=catchAsync(async(req,res,next)=>{
     res.status(200).json({
         status:'success',
         data
+    })
+})
+
+exports.DeleteTodos=catchAsync(async(req,res,next)=>{
+
+    const data=await Todo.findOneAndDelete({user:{_id:req.user._id}});
+    res.status(200).json({
+        status:'success'
     })
 })

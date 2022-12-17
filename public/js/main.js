@@ -4,6 +4,7 @@ import {App} from './createTodo.js';
 import { Render } from './render.js';
 import { createTodo } from "./initialCreate.js";
 import { GetTodo } from "./getTodos.js";
+import { DeleteTodo } from "./DeleteTodo.js";
 const vid=document.querySelector('.vid');
 const addButton=document.querySelector('.Add-Button');
 let Todos=[];
@@ -66,6 +67,9 @@ addButton.addEventListener('click',()=>{
  const Todo=new App(msg);
  Todo._calctime(new Date(Date.now()));
  Todos.push(Todo);
+
+
+ console.log(Todos.length);
  if(Todos.length==1)
  {
  createTodo(Todos,0);
@@ -77,3 +81,14 @@ addButton.addEventListener('click',()=>{
  Render(Todos);
 });
 }
+
+
+window.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('Priority_Star'))
+    {
+      let item=e.target.closest('.TemplateTodo').dataset.itemno;
+      DeleteTodo(Todos,item);
+      console.log(Todos.length);
+      Render(Todos);
+    }
+})

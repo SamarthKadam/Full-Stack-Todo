@@ -127,18 +127,18 @@ video{
     align-items: center;
     justify-content: space-between;
     padding: 0.4em .4em;
-    border-radius: .5em;
+    /* border-radius: .5em; */
     background-color: white;
     font-size: 18px;
     box-sizing: border-box;
 }
-input[type="checkbox"]{
+input[type="radio"]{
     height: 1.5em;
     width: 2em;
 }
 .TextTodo{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 .DateTime{
     display: flex;
@@ -162,5 +162,9 @@ input[type="checkbox"]{
 }
 .Add-Button{
     display: flex;
+    cursor: pointer;
     align-items: center;
+}
+.Priority_Star{
+    cursor: pointer;
 }

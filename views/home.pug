@@ -34,15 +34,16 @@ html(lang='en')
         .Todo_Info
           .Heading HabitZ
           .ListTodos
-           each to in todos
-            .TemplateTodo
-              .TextTodo
-                input(type='checkbox')
-                .DetailsText
-                  .ContentDetails=to.TodoText
-                  .DateTime
-                    img(src='./images/calender.png')
-                    .DataDate-Time=to.timeStamp
+           each to,index in todos
+             .TemplateTodo(data-itemno=`${index+1}`)
+                .TextTodo
+                  input(type='radio')
+                  .DetailsText
+                    .ContentDetails=to.TodoText
+                    .DateTime
+                      img(src='./images/calender.png')
+                      .DataDate-Time=to.timeStamp
+                img.Priority_Star(src='./images/dustbin.png', alt='')
         |  
         .Add-Button
           .plus +

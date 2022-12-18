@@ -5,6 +5,7 @@ const app=require('./app');
 dotenv.config({path:'./config.env'});
 
 const DBAuth=process.env.DB.replace('<password>',process.env.DBpassword);
+console.log(DBAuth);
 
 mongoose.connect(DBAuth,{
     useCreateIndex:true,

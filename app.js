@@ -12,7 +12,6 @@ const todoRouter=require('./routes/todoRouter');
 
 app.use(express.json()); ///This makes one to write in body that is for post request
 
-console.log("is it using .en file",process.env.DOMAIN);
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname,'public')));

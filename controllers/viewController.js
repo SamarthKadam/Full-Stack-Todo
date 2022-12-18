@@ -17,7 +17,7 @@ exports.getHomePage=catchasync(async(req,res)=>{
 
     const data=await Todo.find({user:{_id:req.user._id}});
     let NameText=req.user.name.split(' ');
-    let symbol=`${NameText[0][0]}${NameText[1][0]}` || `${req.user.name[0]}`;
+    let symbol=`${NameText[0][0]}${NameText[1][0]}`.toUpperCase() || `${req.user.name[0]}`;
     let todos=[];
 
     if(data.length===0)

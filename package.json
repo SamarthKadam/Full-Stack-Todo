@@ -4,7 +4,7 @@
   "description": "project where you can create your daily todos",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "samarth kadam",
   "license": "ISC",

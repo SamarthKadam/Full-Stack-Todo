@@ -29,9 +29,10 @@ html(lang='en')
           .textLoggingOut Log Out    
         +contentbar('Tasks','sun')
         +contentbar('Completed','check')
+        -const data=Math.floor(Math.random()*2)
       .rightSection
         video.vid(preload='auto', muted='', loop='')
-          source(src='./videos/Background3.mp4')
+          source(src=`./videos/Background${data}.mp4`)
         |  
         .Todo_Info
           .Heading HabitZ

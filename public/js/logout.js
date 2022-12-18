@@ -5,9 +5,9 @@ export const logout=async()=>{
         url:'http://127.0.0.1:8000/api/v1/users/logout',
     });
 
-    if(res.status==='success')
+    if(res.data.status==='success')
     {
-        location.reload(true);
+        window.location.replace('http://127.0.0.1:8000/login')
     }
     
 }catch(err)

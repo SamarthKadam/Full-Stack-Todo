@@ -27,6 +27,6 @@ process.on('unhandledRejection',err=>{
 })
 
 const port=process.env.PORT||8000
-const server=app.listen(port,process.env.DOMAIN,()=>{
+const server=app.listen(port,()=>{
     console.log(`App running in Port no:${port}`);
 })

@@ -99,11 +99,16 @@ exports.protect=catchAsync(async(req,res,next)=>{
     {
         token=req.cookies.jwt;
     }
+    if(req.cookies.jwt==="loggedout")
+    {
+        return next(new AppError('You are not logged in! Please login to get access',400));
+    }
 
     if(!token)
     {
         return next(new AppError('You are not logged in! Please login to get access',400));
     }
+
 
    const decoded=await promisify(jwt.verify)(token,process.env.JWT_SECRET);
 
@@ -115,6 +120,7 @@ exports.protect=catchAsync(async(req,res,next)=>{
    req.user=freshUser
     next();
 })
+
 
 exports.logOut=catchAsync(async(req,res,next)=>{
     res.cookie('jwt','loggedout',{

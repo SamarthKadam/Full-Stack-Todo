@@ -2,12 +2,12 @@ export const logout=async()=>{
     try{
     const res= await axios({
         method:'GET',
-        url:'http://127.0.0.1:8000/api/v1/users/logout',
+        url:'https://full-stack-todo-production.up.railway.app/api/v1/users/logout',
     });
 
     if(res.data.status==='success')
     {
-        window.location.replace('http://127.0.0.1:8000/login')
+        window.location.replace('https://full-stack-todo-production.up.railway.app/login')
     }
     
 }catch(err)

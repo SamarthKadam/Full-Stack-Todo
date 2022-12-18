@@ -24,7 +24,6 @@ export const signIn=async(name,email,password,passConfirm)=>{
 
 }catch(err)
 {
-  console.log(err);
   statusSeek("Something went wrong",'fail');
 }
 

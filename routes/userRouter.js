@@ -12,6 +12,7 @@ router.delete('/deleteMe',authcontroller.protect,authcontroller.deleteMe);
 
 router.get('/getAllUsers',usercontroller.getAllUsers);
 router.get('/getMe',authcontroller.protect,usercontroller.getMe);
+router.get('/logout',authcontroller.logOut);
 // router.patch('/updateTodoWithUser',authcontroller.protect,usercontroller.UpdateUserWithTodo);
 
 module.exports=router;

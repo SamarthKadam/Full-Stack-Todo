@@ -1,5 +1,4 @@
 export const Render=(Todos)=>{
-    console.log(Todos.length);
     const Screen=document.querySelector('.ListTodos');
     Screen.innerHTML='';
         Todos.forEach((data,index)=>{

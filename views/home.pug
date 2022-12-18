@@ -25,6 +25,8 @@ html(lang='en')
           .Social_Details
             .name_Details=user.name
             .email_Details=user.email
+        .Logout_Cont
+          .textLoggingOut Log Out    
         +contentbar('Tasks','sun')
         +contentbar('Completed','check')
       .rightSection
@@ -37,7 +39,7 @@ html(lang='en')
            each to,index in todos
              .TemplateTodo(data-itemno=`${index+1}`)
                 .TextTodo
-                  input(type='radio')
+                  input(type='checkbox')
                   .DetailsText
                     .ContentDetails=to.TodoText
                     .DateTime

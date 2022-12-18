@@ -5,6 +5,7 @@ import { Render } from './render.js';
 import { createTodo } from "./initialCreate.js";
 import { GetTodo } from "./getTodos.js";
 import { DeleteTodo } from "./DeleteTodo.js";
+import { logout } from "./logout.js";
 const vid=document.querySelector('.vid');
 const addButton=document.querySelector('.Add-Button');
 let Todos=[];
@@ -15,11 +16,11 @@ vid.play();
 
 GetTodo().then((data)=>{
     Todos=data;
-    console.log(Todos);
 })
 
 const loginBtn=document.querySelector('.login_button');
 const signBtn=document.querySelector('.sign-button');
+const logoutBtn=document.querySelector('.Logout_Cont');
 if(loginBtn)
 {
     const username=document.querySelector('#userName')
@@ -69,17 +70,23 @@ addButton.addEventListener('click',()=>{
  Todos.push(Todo);
 
 
- console.log(Todos.length);
  if(Todos.length==1)
  {
  createTodo(Todos,0);
  }
  else{
-    console.log("Find Alternative");
     createTodo(Todos,1);
  }
  Render(Todos);
 });
+}
+
+if(logoutBtn)
+{
+    logoutBtn.addEventListener('click',()=>{
+        console.log("logged out");
+        logout();
+    })
 }
 
 
@@ -88,7 +95,6 @@ window.addEventListener('click',(e)=>{
     {
       let item=e.target.closest('.TemplateTodo').dataset.itemno;
       DeleteTodo(Todos,item);
-      console.log(Todos.length);
       Render(Todos);
     }
 })

@@ -116,6 +116,16 @@ exports.protect=catchAsync(async(req,res,next)=>{
     next();
 })
 
+exports.logOut=catchAsync(async(req,res,next)=>{
+    res.cookie('jwt','loggedout',{
+        expiresIn:new Date(Date.now()+10*1000),
+        httpOnly:true
+    })
+
+    res.status(200).json({
+        status:'success',
+    })
+})
 
 exports.updateMyPassword=catchAsync(async(req,res,next)=>{
 

@@ -24,6 +24,7 @@ body{
     grid-template-columns: 1.2fr 3fr;
     border-radius: 1em;
     overflow: hidden;
+    min-width: 800px;
     position: relative;
 }
 .leftSection{

@@ -117,3 +117,32 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+@media only screen and (max-width: 1200px) {
+    .FormPage{
+        width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .FormPage{
+        width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 679px) {
+    .FormPage{
+        width: 70%;
+    }
+  }
+
+  @media only screen and (max-width: 511px) {
+    .FormPage{
+        width: 85%;
+    }
+  }
+  @media only screen and (max-width: 455px) {
+    .FormPage{
+        width: 90%;
+    }
+  }

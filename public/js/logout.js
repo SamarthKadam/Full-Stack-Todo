@@ -8,9 +8,6 @@ export const logout=async()=>{
     if(res.data.status==='success')
     {
         window.location.replace('https://full-stack-todo-production.up.railway.app/login')
-        setTimeout(()=>{
-            location.reload(true);
-        },5000)
     }
     
 }catch(err)

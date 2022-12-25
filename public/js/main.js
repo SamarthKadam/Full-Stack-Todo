@@ -6,6 +6,7 @@ import { createTodo } from "./initialCreate.js";
 import { GetTodo } from "./getTodos.js";
 import { DeleteTodo } from "./DeleteTodo.js";
 import { logout } from "./logout.js";
+import {UpdateTodosList} from "./UpdatetTodos";
 const vid=document.querySelector('.vid');
 const addButton=document.querySelector('.Add-Button');
 let Todos=[];
@@ -96,5 +97,28 @@ window.addEventListener('click',(e)=>{
       let item=e.target.closest('.TemplateTodo').dataset.itemno;
       DeleteTodo(Todos,item);
       Render(Todos);
+    }
+    
+    if(e.target.classList.contains('CheckBox'))
+    {
+        console.log("Reply");
+        let item=e.target.closest('.TemplateTodo');
+        let  i=item.dataset.itemno;
+        let text=item.querySelector('.ContentDetails');
+
+        console.log(Todos[i-1]);
+
+        if(Todos[i-1].prio===true)
+        {
+        
+        text.classList.add("lineThrough");
+        Todos[i-1].prio=false;
+        }
+        else{
+            console.log("Hinga vita mare?")
+           Todos[i-1].prio=true;
+            text.classList.remove('lineThrough');
+        }
+        UpdateTodosList(Todos);
     }
 })

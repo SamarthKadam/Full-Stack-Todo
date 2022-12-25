@@ -184,3 +184,6 @@ input[type="checkbox"]{
     border-radius: .5em;
     cursor: pointer;
 }
+.lineThrough{
+    text-decoration: line-through;
+}

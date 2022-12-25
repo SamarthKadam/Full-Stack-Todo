@@ -4,6 +4,18 @@ mixin contentbar(Text,image)
             | &nbsp;&nbsp;
             .TaskText=Text
 
+mixin condition(to)
+ if to.prio
+  .ContentDetails=to.TodoText
+ else 
+  .ContentDetails.lineThrough=to.TodoText
+ 
+mixin checked(prio)
+ if !prio
+  input(type='checkbox' checked).CheckBox
+ else 
+  input(type='checkbox').CheckBox            
+
 doctype html
 html(lang='en')
   head
@@ -40,9 +52,9 @@ html(lang='en')
            each to,index in todos
              .TemplateTodo(data-itemno=`${index+1}`)
                 .TextTodo
-                  input(type='checkbox')
+                  +checked(to.prio)
                   .DetailsText
-                    .ContentDetails=to.TodoText
+                    +condition(to)
                     .DateTime
                       img(src='./images/calender.png')
                       .DataDate-Time=to.timeStamp

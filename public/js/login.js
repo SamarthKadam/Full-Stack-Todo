@@ -10,7 +10,7 @@ export const login=async(username,password)=>{
   try{
    const res= await axios({
       method:'POST',
-      url:'https://full-stack-todo-production.up.railway.app/api/v1/users/login',
+      url:'https://fullstackweb.onrender.com/api/v1/users/login',
       data
   });
   if(res.data.status==='success')

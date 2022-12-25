@@ -7,7 +7,7 @@ export const DeleteTodo=async(Todo,item)=>{
     let todo=Todo;
         let patchReq=await axios({
             method:'PATCH',
-            url:'https://full-stack-todo-production.up.railway.app/api/v1/todos/UpdateTodos',
+            url:'https://fullstackweb.onrender.com/api/v1/todos/UpdateTodos',
             data:{
                 todo
             }
@@ -18,7 +18,7 @@ export const DeleteTodo=async(Todo,item)=>{
             console.log("What the fuck is happening");
             let Delreq=await axios({
                 method:'DELETE',
-                url:'https://full-stack-todo-production.up.railway.app/api/v1/todos/DeleteTodos'
+                url:'https://fullstackweb.onrender.com/api/v1/todos/DeleteTodos'
             })
             Todo.splice(item-1,1);
             return;

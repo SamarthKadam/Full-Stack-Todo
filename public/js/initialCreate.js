@@ -3,7 +3,7 @@ export const createTodo=async(Todo,Modify)=>{
     try{
     const cont=await axios({
         method:'GET',
-        url:'https://full-stack-todo-production.up.railway.app/api/v1/users/getMe'
+        url:'https://fullstackweb.onrender.com/api/v1/users/getMe'
     })
     const user=cont.data.data._id;
     const data={
@@ -15,7 +15,7 @@ export const createTodo=async(Todo,Modify)=>{
     {
      res= await axios({
         method:'POST',
-        url:'https://full-stack-todo-production.up.railway.app/api/v1/todos/create',
+        url:'https://fullstackweb.onrender.com/api/v1/todos/create',
         data
     });
     }
@@ -23,7 +23,7 @@ export const createTodo=async(Todo,Modify)=>{
         let todo=Todo;
         let patchReq=await axios({
             method:'PATCH',
-            url:'https://full-stack-todo-production.up.railway.app/api/v1/todos/UpdateTodos',
+            url:'https://fullstackweb.onrender.com/api/v1/todos/UpdateTodos',
             data:{
                 todo
             }

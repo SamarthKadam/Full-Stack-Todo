@@ -6,7 +6,7 @@ import { createTodo } from "./initialCreate.js";
 import { GetTodo } from "./getTodos.js";
 import { DeleteTodo } from "./DeleteTodo.js";
 import { logout } from "./logout.js";
-import {UpdateTodosList} from "./UpdatetTodos";
+import {UpdateTodosList} from "./UpdatetTodos.js";
 const vid=document.querySelector('.vid');
 const addButton=document.querySelector('.Add-Button');
 let Todos=[];

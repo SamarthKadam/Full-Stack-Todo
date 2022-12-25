@@ -4,7 +4,7 @@ export const Render=(Todos)=>{
         Todos.forEach((data,index)=>{
 
             let part;
-            if(data.prio)
+            if(!data.prio)
             {
              part=`<input type="checkbox" class="CheckBox" checked ><div class="DetailsText"><div class="ContentDetails lineThrough">${data.TodoText}</div><div class="DateTime"><img src="./images/calender.png"><div class="DataDate-Time" >${data.timeStamp}</div></div></div> `;
             }

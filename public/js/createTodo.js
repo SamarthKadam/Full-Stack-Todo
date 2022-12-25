@@ -2,7 +2,7 @@ export class App{
     constructor(Text)
     {
         this.TodoText=Text;
-        this.prio=false;
+        this.prio=true;
     }
     _calctime(time)
     {

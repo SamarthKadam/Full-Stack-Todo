@@ -53,7 +53,9 @@ if(signBtn)
     const password=document.querySelector('#Pass_Sign');
     const passConfirm=document.querySelector('#CPass_Sign')
 
+
     signBtn.addEventListener('click',()=>{
+        signBtn.innerHTML='loading....'
         signIn(name.value,email.value,password.value,passConfirm.value);
     })
 

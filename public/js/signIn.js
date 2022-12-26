@@ -1,4 +1,5 @@
 import { statusSeek } from "./status.js";
+const signBtn=document.querySelector('.sign-button');
 export const signIn=async(name,email,password,passConfirm)=>{
 
     const data={

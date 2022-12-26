@@ -87,7 +87,6 @@ addButton.addEventListener('click',()=>{
 if(logoutBtn)
 {
     logoutBtn.addEventListener('click',()=>{
-        console.log("logged out");
         logout();
     })
 }
@@ -103,12 +102,10 @@ window.addEventListener('click',(e)=>{
     
     if(e.target.classList.contains('CheckBox'))
     {
-        console.log("Reply");
         let item=e.target.closest('.TemplateTodo');
         let  i=item.dataset.itemno;
         let text=item.querySelector('.ContentDetails');
 
-        console.log(Todos[i-1]);
 
         if(Todos[i-1].prio===true)
         {
@@ -117,7 +114,6 @@ window.addEventListener('click',(e)=>{
         Todos[i-1].prio=false;
         }
         else{
-            console.log("Hinga vita mare?")
            Todos[i-1].prio=true;
             text.classList.remove('lineThrough');
         }

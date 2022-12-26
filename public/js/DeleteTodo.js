@@ -15,7 +15,6 @@ export const DeleteTodo=async(Todo,item)=>{
 
         if(Todo.length===0)
         {
-            console.log("What the fuck is happening");
             let Delreq=await axios({
                 method:'DELETE',
                 url:'https://fullstackweb.onrender.com/api/v1/todos/DeleteTodos'
@@ -25,5 +24,4 @@ export const DeleteTodo=async(Todo,item)=>{
         }
 
 
-        // console.log(patchReq);
 }

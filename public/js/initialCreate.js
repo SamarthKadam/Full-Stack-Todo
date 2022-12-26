@@ -29,7 +29,6 @@ export const createTodo=async(Todo,Modify)=>{
             }
         })
 
-        console.log(patchReq);
 
 
     }
@@ -38,7 +37,6 @@ export const createTodo=async(Todo,Modify)=>{
 
     }catch(err)
     {
-        console.log("Something went wrong");
         console.log(err);
     }
 }

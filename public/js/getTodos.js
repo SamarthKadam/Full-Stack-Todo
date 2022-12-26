@@ -9,7 +9,6 @@ export const GetTodo=async()=>{
     }
     catch(err)
     {
-        // console.log(err);
         return [];
     }
 }

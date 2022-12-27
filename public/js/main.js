@@ -61,7 +61,8 @@ if(signBtn)
             alert("please enter valid detials");
             return;
         }
-
+        
+        signBtn.innerHTML='loading....'
         signIn(name.value,email.value,password.value,passConfirm.value);
     })
 

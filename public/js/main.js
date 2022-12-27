@@ -56,7 +56,7 @@ if(signBtn)
 
     signBtn.addEventListener('click',()=>{
 
-        if(name.value&&email.value&&password.value&&passConfirm.value)
+        if(!(name.value&&email.value&&password.value&&passConfirm.value))
         {
             alert("please enter valid detials");
             return;

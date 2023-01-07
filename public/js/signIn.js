@@ -25,6 +25,7 @@ export const signIn=async(name,email,password,passConfirm)=>{
 
 }catch(err)
 {
+    signBtn.innerHTML='SIGN UP'
   statusSeek("Something went wrong",'fail');
 }
 
